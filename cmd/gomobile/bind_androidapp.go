@@ -269,7 +269,7 @@ func buildJar(w io.Writer, srcDir string, targetPkg string) error {
 				srcFiles = append(srcFiles, filepath.Join(".", path[len(srcDir):]))
 			}
 			//change the so name manually
-			if strings.Contains(path, "LoadJNI.java") {
+			if strings.Contains(path, "Seq.java") {
 				content, err := ioutil.ReadFile(path)
 				if err != nil {
 					return fmt.Errorf("failed in changing the so name manually, %w", err)

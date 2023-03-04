@@ -34,10 +34,15 @@ public class Seq {
 	private static final GoRefQueue goRefQueue = new GoRefQueue();
 
 	static {
+		System.out.println("load-1!!")
 		System.loadLibrary("gojni");
+		System.loadLibrary("third_party");
+		System.out.println("load-2!!")
 		init();
 		Universe.touch();
 	}
+
+
 
 	// setContext sets the context in the go-library to be used in RunOnJvm.
 	public static void setContext(Context context) {
